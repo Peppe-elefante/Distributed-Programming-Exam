@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by XML-WS Runtime (https://github.com/eclipse-ee4j/metro-jax-ws). Runtime's version is Eclipse Metro/4.0.4 (RELEASE-4.0.4-ec440d5; 2024-06-28T10:09:00+0000) XMLWS-Impl/4.0.3 XMLWS-API/4.0.2 XMLB-Impl/4.0.5 XMLB-API/4.0.2 git-revision#ec440d5. --><xs:schema xmlns:tns="http://libro/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://libro/">
+
+<xs:element name="libroEntity" type="tns:libroEntity"/>
+
+<xs:element name="libroService" type="tns:libroService"/>
+
+<xs:element name="libroServiceResponse" type="tns:libroServiceResponse"/>
+
+<xs:element name="removeLibro" type="tns:removeLibro"/>
+
+<xs:element name="removeLibroResponse" type="tns:removeLibroResponse"/>
+
+<xs:element name="saveLibro" type="tns:saveLibro"/>
+
+<xs:element name="saveLibroResponse" type="tns:saveLibroResponse"/>
+
+<xs:element name="trovaId" type="tns:trovaId"/>
+
+<xs:element name="trovaIdResponse" type="tns:trovaIdResponse"/>
+
+<xs:element name="trovaNome" type="tns:trovaNome"/>
+
+<xs:element name="trovaNomeResponse" type="tns:trovaNomeResponse"/>
+
+<xs:element name="trovaTutti" type="tns:trovaTutti"/>
+
+<xs:element name="trovaTuttiResponse" type="tns:trovaTuttiResponse"/>
+
+<xs:element name="updateLibro" type="tns:updateLibro"/>
+
+<xs:element name="updateLibroResponse" type="tns:updateLibroResponse"/>
+
+<xs:complexType name="saveLibro">
+<xs:sequence>
+<xs:element name="arg0" type="tns:libroEntity" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="libroEntity">
+<xs:sequence>
+<xs:element name="autore" type="xs:string" minOccurs="0"/>
+<xs:element name="collocazione" type="xs:string" minOccurs="0"/>
+<xs:element name="data" type="tns:localDate" minOccurs="0"/>
+<xs:element name="id" type="xs:long" minOccurs="0"/>
+<xs:element name="stato" type="xs:string" minOccurs="0"/>
+<xs:element name="titolo" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="localDate" final="extension restriction">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="saveLibroResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="trovaId">
+<xs:sequence>
+<xs:element name="arg0" type="xs:long" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="trovaIdResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:libroEntity" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateLibro">
+<xs:sequence>
+<xs:element name="arg0" type="tns:libroEntity" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateLibroResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="libroService">
+<xs:sequence>
+<xs:element name="arg0" type="xs:long"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="libroServiceResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="trovaNome">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="trovaNomeResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:libroEntity" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="trovaTutti">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="trovaTuttiResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:libroEntity" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="removeLibro">
+<xs:sequence>
+<xs:element name="arg0" type="tns:libroEntity" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="removeLibroResponse">
+<xs:sequence/>
+</xs:complexType>
+</xs:schema>

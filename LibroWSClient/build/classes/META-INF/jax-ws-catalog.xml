@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="file:/C:/Users/ACER/Downloads/LibroEJB.xml" uri="wsdl/LibroEJB.xml.wsdl"/>
+    <system systemId="http://laptop-hi1vobsu:8080/LibroEJBService/LibroEJB?xsd=1" uri="wsdl/laptop-hi1vobsu_8080/LibroEJBService/LibroEJB.xsd_1.xsd"/>
+</catalog>
